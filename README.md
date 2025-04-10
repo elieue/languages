@@ -1,2 +1,2 @@
-# sql
-This includes my journey to sql from scratch with codex and datacamp
+# SQL
+A 7 day journey to SQL from scratch with codex and datacamp.
