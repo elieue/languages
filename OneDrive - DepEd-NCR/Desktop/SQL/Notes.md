@@ -94,6 +94,6 @@ OR = satisfy at least one condition (need to specify field name)
 
 AND = both situation must be satisfy (need to specify field name)
 
-note: can have multiple and 
+note: can have multiple and
 
 BETWEEN - filtering values within specific range
