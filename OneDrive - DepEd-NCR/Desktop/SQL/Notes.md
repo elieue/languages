@@ -1,4 +1,3 @@
-
 # Notes
 
 ## Introduction
@@ -86,3 +85,13 @@ Most common errors:
 - Misspelling
 - Incorrect capitalization
 - Incorrect or missing punctuations, especially commas
+
+Filtering Records
+
+<> = not equal to
+
+AND = must satisfy both
+
+OR = can satisfy one
+
+BETWEEN = within a range
