@@ -41,7 +41,7 @@
 
   * SELECT AVG(plays)
     FROM playlist;
-* ROUND(): 
+* ROUND():
 
 GROUP BY - used to group attributes
 
