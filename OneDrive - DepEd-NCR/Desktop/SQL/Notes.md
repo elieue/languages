@@ -1,3 +1,6 @@
+
+# Notes
+
 # Notes
 
 ## Introduction
@@ -17,10 +20,6 @@
 **LIKE** - used to find pattern 'A%' means starting with 'A', %z means ending matches with 'z', %the% means anything that containt the word the
 
 **BETWEEN** '_' **AND** ' _' - used to filter certain range
-
-**ORDER BY** - sorts the data in ascending order
-
-**ORDER BY __ DESC** - sorts data in descending order
 
 ## Aggregates
 
@@ -168,3 +167,39 @@ FROM reviews;
 - IS NOT NULL
 
   - have anything
+
+## Sorting Results
+
+**ORDER BY** - sorts the data in ascending order
+
+**ORDER BY __ DESC** - sorts data in descending order
+
+## Grouping Data
+
+**GROUP BY __** - provide summary when grouping a single field
+
+### Example
+
+Using the `films` table: which `release_year` had the most language diversity?
+
+Take your time to translate this question into code and test your queries in the console.
+
+"Most language diversity" can be interpreted as `COUNT(DISTINCT ___)`. Now over to you.
+
+SELECT release_year, COUNT(DISTINCT language) AS diverse_language
+
+FROM films
+
+GROUP BY release_year
+
+ORDER BY diverse_language DESC
+
+LIMIT 1;
+
+## Filtering Grouped Daata
+
+**HAVING -** keyword for GROUP BY
+
+![1745043528815](image/Notes/1745043528815.png)
+
+WHERE filters individual records, HAVING filters grouped records
