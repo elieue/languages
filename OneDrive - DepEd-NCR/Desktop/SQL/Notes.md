@@ -1,6 +1,3 @@
-
-# Notes
-
 # Notes
 
 ## Introduction
