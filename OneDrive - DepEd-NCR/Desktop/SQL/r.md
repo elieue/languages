@@ -79,3 +79,9 @@ Rows
 Columns
 
 [, 2]
+
+### Factors
+
+factor()
+
+summary()
