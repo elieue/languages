@@ -79,3 +79,59 @@ Rows
 Columns
 
 [, 2]
+
+### Factor
+
+factor()
+
+summary()
+
+levels()
+
+ordered = TRUE/FALSE
+
+### Data Frames
+
+str() - consider string
+
+head() - the front
+
+data.frame()
+
+subset()
+
+order(a) - make things in order
+
+a[order(a)] - reshuffle order
+
+#### Example:
+
+Select first 5 values of diameter column
+
+planets_df[1:5, "diameter"]
+
+Shortcut - planets_df$rings
+
+note: see the "$"" symbol
+
+#### Example:
+
+Adapt the code to select all columns for planets with rings
+
+planets_df[rings_vector, ]
+
+#### Example:
+
+Select planets with diameter < 1
+
+subset(planets_df, subset = diameter < 1)
+
+#### Example:
+
+Use order() to create positions
+
+positions <-  order(planets_df$diameter)
+
+Use positions to sort planets_df
+
+planets_df[positions, ]
