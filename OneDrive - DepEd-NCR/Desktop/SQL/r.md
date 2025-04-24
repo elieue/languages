@@ -132,6 +132,7 @@ positions <-  order(planets_df$diameter)
 
 Use positions to sort planets_df
 
+<<<<<<< HEAD
 planets_df[positions, ]
 
 ### List
@@ -143,3 +144,5 @@ list() - components can be matrices, vectors, other lists
 Name the lists
 
 my_list <- list(vec = my_vector, mat = my_matrix, df = my_df)
+
+planets_df[positions, ]
