@@ -72,13 +72,9 @@ vec2    4    5    6
 
 ### How to look for rows & columns
 
-Rows
+Rows - [1, ]
 
-[1, ]
-
-Columns
-
-[, 2]
+Columns - [, 2]
 
 ### Factor
 
@@ -95,6 +91,8 @@ ordered = TRUE/FALSE
 str() - consider string
 
 head() - the front
+
+tail()
 
 data.frame()
 
@@ -135,3 +133,13 @@ positions <-  order(planets_df$diameter)
 Use positions to sort planets_df
 
 planets_df[positions, ]
+
+### List
+
+list() - components can be matrices, vectors, other lists
+
+#### Example
+
+Name the lists
+
+my_list <- list(vec = my_vector, mat = my_matrix, df = my_df)
