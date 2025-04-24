@@ -78,7 +78,7 @@ Columns - [, 2]
 
 ### Factor
 
-factor()
+factor() - store categorical values
 
 summary()
 
@@ -88,7 +88,7 @@ ordered = TRUE/FALSE
 
 ### Data Frames
 
-str() - consider string
+str() - get rapid overview of the data
 
 head() - the front
 
@@ -96,7 +96,7 @@ tail()
 
 data.frame()
 
-subset()
+subset() - shortcut to select a subset
 
 order(a) - make things in order
 
