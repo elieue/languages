@@ -72,17 +72,13 @@ vec2    4    5    6
 
 ### How to look for rows & columns
 
-Rows
+Rows - [1, ]
 
-[1, ]
-
-Columns
-
-[, 2]
+Columns - [, 2]
 
 ### Factor
 
-factor()
+factor() - store categorical values
 
 summary()
 
@@ -92,13 +88,15 @@ ordered = TRUE/FALSE
 
 ### Data Frames
 
-str() - consider string
+str() - get rapid overview of the data
 
 head() - the front
 
+tail()
+
 data.frame()
 
-subset()
+subset() - shortcut to select a subset
 
 order(a) - make things in order
 
@@ -133,5 +131,18 @@ Use order() to create positions
 positions <-  order(planets_df$diameter)
 
 Use positions to sort planets_df
+
+<<<<<<< HEAD
+planets_df[positions, ]
+
+### List
+
+list() - components can be matrices, vectors, other lists
+
+#### Example
+
+Name the lists
+
+my_list <- list(vec = my_vector, mat = my_matrix, df = my_df)
 
 planets_df[positions, ]
