@@ -146,3 +146,5 @@ Name the lists
 my_list <- list(vec = my_vector, mat = my_matrix, df = my_df)
 
 planets_df[positions, ]
+
+rownames - use to name rows
