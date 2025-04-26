@@ -200,3 +200,23 @@ LIMIT 1;
 ![1745043528815](image/Notes/1745043528815.png)
 
 WHERE filters individual records, HAVING filters grouped records
+
+# Joining Data in SQL
+
+INNER JOIN + LEFT JOIN = COMBINED TABLES
+
+ID_field = key
+
+Inner Join = looks for records with the same values in the key field 
+
+## Syntax
+
+table.column_name
+
+SELECT p2.country, p2.continent, prime_minister, president
+
+FROM presidents AS p1
+
+INNER JOIN prime_minesters as p2
+
+ON p1.country = p2.country;  \|| or USING (country)
