@@ -203,20 +203,70 @@ WHERE filters individual records, HAVING filters grouped records
 
 # Joining Data in SQL
 
+## Introduction Inner Joins
+
 INNER JOIN + LEFT JOIN = COMBINED TABLES
 
 ID_field = key
 
-Inner Join = looks for records with the same values in the key field 
+Inner Join = looks for records with the same values in the key field
 
-## Syntax
+### Syntax
 
 table.column_name
 
-SELECT p2.country, p2.continent, prime_minister, president
+#### Example:
 
-FROM presidents AS p1
+-- Select fields with aliases
 
-INNER JOIN prime_minesters as p2
+SELECT c.code AS country_code, name, year, e.inflation_rate
 
-ON p1.country = p2.country;  \|| or USING (country)
+FROM countries AS c
+
+-- Join to economies (alias e)
+
+INNER JOIN economies AS e
+
+-- Match on code field using table aliases
+
+ON c.code = e.code; || or USING (country)
+
+Defining relationships
+
+One-to-many
+
+One-to-one
+
+Many-to-many
+
+## Multiple Joins
+
+### Syntax
+
+SELECT * #here mo ilalagay kung anong column want mo
+
+FROM left_table
+
+INNER JOIN right_table
+
+ON left_table.id = right_table.id #here naman yung kaparehas nila na identifier
+
+    AND left_table.date = right_table.id
+
+INNER JOIN another_table
+
+ON left_table.id = another_table.id  # bali you can use using sa same id sa new table na imemerge mo
+
+#### Example:
+
+SELECT p1.country, p2.continent, president, prime_minester, pm_start
+
+FROM prime_minister as p1
+
+INNER JOIN presidents as p2
+
+USING (country)
+
+INNER JOIN prime_minester_terms as p3
+
+USING (prime_minester)
