@@ -203,7 +203,9 @@ WHERE filters individual records, HAVING filters grouped records
 
 # Joining Data in SQL
 
-## Introduction Inner Joins
+## Introducing Inner Joins
+
+### The ins and outs of INNER JOIN
 
 INNER JOIN + LEFT JOIN = COMBINED TABLES
 
@@ -211,11 +213,11 @@ ID_field = key
 
 Inner Join = looks for records with the same values in the key field
 
-### Syntax
+#### Syntax
 
 table.column_name
 
-#### Example:
+##### Example:
 
 -- Select fields with aliases
 
@@ -225,7 +227,7 @@ FROM countries AS c
 
 -- Join to economies (alias e)
 
-INNER JOIN economies AS e
+**INNER JOIN** economies AS e
 
 -- Match on code field using table aliases
 
@@ -239,9 +241,9 @@ One-to-one
 
 Many-to-many
 
-## Multiple Joins
+### Multiple Joins
 
-### Syntax
+#### Syntax
 
 SELECT * #here mo ilalagay kung anong column want mo
 
@@ -257,7 +259,7 @@ INNER JOIN another_table
 
 ON left_table.id = another_table.id  # bali you can use using sa same id sa new table na imemerge mo
 
-#### Example:
+##### Example:
 
 SELECT p1.country, p2.continent, president, prime_minester, pm_start
 
@@ -270,3 +272,53 @@ USING (country)
 INNER JOIN prime_minester_terms as p3
 
 USING (prime_minester)
+
+## Outer Joins, Cross Joins and Self Joins
+
+### Left and Right Joins
+
+Bali here sa left join pwede masama lahat ng query kahit hindi match sa right join, pero yung right join yung unmatch is hindi makakasama. Magiging null yung rest ng left join
+
+![1745851176358](image/sql/1745851176358.png)
+
+#### Syntax
+
+SELECT p1.country, prime_minister, president
+
+FROM prime_ministers AS p1
+
+**LEFT JOIN** presidents AS p2 #pwede ring syntax na LEFT OUTER JOIN
+
+USING (country);
+
+Same lang sa RIGHT JOIN, but reverse (RIGHT OUTER JOIN)
+
+### FULL JOINS
+
+return all ids irrespective of whether they have a match, bali null yung mga walang match
+
+#### Syntax
+
+SELECT left_table.id AS L_id, right_table.id AS r_id, left_table.val AS L_val, right_table.val AS R_val
+
+FROM left_table
+
+**FULL JOIN** right_table
+
+USING(id);
+
+##### Example:
+
+SELECT p1.country AS country, prime_minester, president
+
+FROM prime_ministers AS p1
+
+FULL JOIN presidents AS p2
+
+ON p1.country = p2.country
+
+LIMIT 10;
+
+### CROSS JOINS
+
+#### SYNTAX
