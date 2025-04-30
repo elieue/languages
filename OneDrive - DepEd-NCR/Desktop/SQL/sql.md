@@ -344,3 +344,34 @@ CROSS JOIN presidents AS p2 ##KAPAG Cross Join you don't have to use ON or USING
 WHERE p1.continent IN ('Asia')
 
     AND p2.continent IN ('South America')
+
+### SELF JOINS
+
+- table joined with themselves
+- can be used to compare parts of the same table
+
+#### SYNTAX
+
+##### EXAMPLE
+
+SELECT p1.country AS country1, p2.country AS country2, p1.continent
+
+FROM prime_ministers AS p1
+
+INNER JOIN prime_ministers AS p2
+
+ON p1.continent = p2.continent
+
+    AND p1.country <> p2.country
+
+LIMIT 10;
+
+# Set Theory for SQL Joins
+
+## Set theory fpr SQL Joins
+
+
+## At the INTERSECT
+
+
+## EXCEPT
