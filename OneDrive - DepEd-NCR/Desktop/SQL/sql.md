@@ -368,10 +368,74 @@ LIMIT 10;
 
 # Set Theory for SQL Joins
 
-## Set theory fpr SQL Joins
+![1746092430946](image/sql/1746092430946.png)
 
+## Set theory for SQL Joins
+
+UNION - takes two tables as input, and returns all records from both tables
+
+### Syntax
+
+SELECT *
+
+FROM left_table
+
+UNION
+
+SELECT *
+
+FROM right_table;
+
+#### Examples:
+
+SELECT monarch AS leader, country
+
+FROM monarchs
+
+UNION
+
+SELECT prime_ministers, country
+
+FROM  prime_ministers
+
+ORDER BY country, leader
+
+LIMIT 10;
+
+UNION ALL - takes two tables and returns all records from both tables including duplicates
+
+### Syntax
+
+SELECT *
+
+FROM left_table
+
+UNION ALL
+
+SELECT *
+
+FROM right_table;
+
+Note: Do not require "ON" rather than comparing and merging tables on the left and right, they stack fields on top of one another
+
+#### Examples:
+
+SELECT monarch AS leader, country
+
+FROM monarchs
+
+UNION
+
+SELECT prime_ministers, country
+
+FROM  prime_ministers
+
+ORDER BY country, leader
+
+LIMIT 10;
+
+Note: Use the first column name when using ORDER BY
 
 ## At the INTERSECT
-
 
 ## EXCEPT
