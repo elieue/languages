@@ -149,7 +149,7 @@ planets_df[positions, ]
 
 rownames - use to name rows
 
-# Sample Problem
+#### Sample Problem
 
 Return a table with **nine** rows and **five** columns.
 

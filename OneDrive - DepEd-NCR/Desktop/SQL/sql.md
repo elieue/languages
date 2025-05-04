@@ -213,6 +213,8 @@ ID_field = key
 
 Inner Join = looks for records with the same values in the key field
 
+will return duplicate value
+
 #### Syntax
 
 table.column_name
@@ -372,7 +374,7 @@ LIMIT 10;
 
 ## Set theory for SQL Joins
 
-UNION - takes two tables as input, and returns all records from both tables
+UNION - takes two tables as input, and returns all records from both tables not including duplicates
 
 ### Syntax
 
@@ -437,5 +439,31 @@ LIMIT 10;
 Note: Use the first column name when using ORDER BY
 
 ## At the INTERSECT
+
+### Syntax
+
+SELECT *
+
+FROM left_table
+
+INTERSECT
+
+SELECT *
+
+FROM right_table;
+
+Note: Will return one value unlike inner join-duplicate
+
+#### Example
+
+SELECT country AS intersect_country
+
+FROM prime_ministers
+
+INTERSECT
+
+SELECT country
+
+FROM presidents;
 
 ## EXCEPT
