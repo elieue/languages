@@ -467,3 +467,17 @@ SELECT country
 FROM presidents;
 
 ## EXCEPT
+
+- allows us to identify the records that are present in one table, but not the other
+
+#### Example
+
+SELECT monarch, country
+
+FROM monarchs
+
+EXCEPT
+
+SELECT prime_ministers, country
+
+FROM prime_ministers;
