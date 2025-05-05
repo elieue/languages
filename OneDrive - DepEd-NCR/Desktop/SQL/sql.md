@@ -481,3 +481,23 @@ EXCEPT
 SELECT prime_ministers, country
 
 FROM prime_ministers;
+
+# Subqueries
+
+## Subquerying with semi joins and anti joins
+
+### Syntax
+
+#### Example
+
+## Subqueries inside WHERE and SELECT
+
+### Syntax
+
+#### Example
+
+## Subqueries inside FROM
+
+### Syntax
+
+#### Example
