@@ -486,9 +486,42 @@ FROM prime_ministers;
 
 ## Subquerying with semi joins and anti joins
 
-### Syntax
+- a semi joins chooses records in the first table where a condition is met in the second table
 
-#### Example
+  ![1746545156169](image/sql/1746545156169.png)
+
+### Example - Semi Join
+
+SELECT presidents, country, continent
+
+FROM presidents
+
+WHERE country **IN**
+
+    (SELECT country
+
+    FROM states
+
+    WHERE indep_year < 1800);
+
+- use list of countries as a filter by embedding it in a further WHERE clause
+- Note: this is a subquery
+
+### Example - Anti Join
+
+SELECT presidents, country, 
+
+FROM presidents
+
+WHERE country **LIKE** '%America'
+
+    AND  country**NOT IN**
+
+    (SELECT country
+
+    FROM states
+
+    WHERE indep_year < 1800);
 
 ## Subqueries inside WHERE and SELECT
 
