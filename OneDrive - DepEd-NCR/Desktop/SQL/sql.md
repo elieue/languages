@@ -509,7 +509,7 @@ WHERE country **IN**
 
 ### Example - Anti Join
 
-SELECT presidents, country, 
+SELECT presidents, country,
 
 FROM presidents
 
@@ -525,9 +525,41 @@ WHERE country **LIKE** '%America'
 
 ## Subqueries inside WHERE and SELECT
 
+- WHERE IN enables us to provides  a list of values filter on
+- Second most type of subquery is SELECT clause
+
 ### Syntax
 
+SELECT *
+
+FROM some_table
+
+WHERE some_field IN
+
+    (SELECT some_numeric_field
+
+    FROM another_table
+
+    WHERE field2 = some_condition)
+
 #### Example
+
+SELECT *
+
+FROM populations
+
+WHERE year = 2015
+
+-- Filter for only those populations where life expectancy is 1.15 times higher than average
+
+  AND life_expectancy > 1.15 *
+
+  (SELECT AVG(life_expectancy)
+
+   FROM populations
+
+   WHERE year = 2015);
+
 
 ## Subqueries inside FROM
 
