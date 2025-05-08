@@ -560,9 +560,15 @@ WHERE year = 2015
 
    WHERE year = 2015);
 
-
 ## Subqueries inside FROM
+
 
 ### Syntax
 
 #### Example
+
+SELECT continent, MAX(indep_year) AS most_recent
+
+FROM states
+
+GROUP BY continents;
