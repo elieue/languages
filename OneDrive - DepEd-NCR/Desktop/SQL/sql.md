@@ -562,13 +562,43 @@ WHERE year = 2015
 
 ## Subqueries inside FROM
 
+- returns duplicates for multiple occurences of id when it matches in both tables
+- ![1746709881527](image/sql/1746709881527.png)
+- can drop duplicates using the DISTINCT comman
 
 ### Syntax
 
+- with duplicates
+
+SELECT left_table.id, left_val
+
+FROM left_table, right_table
+
+WHERE left_table.id = right_table.id
+
+
+- without duplicates
+
+SELECT DISTINCT left_table.id, left_val
+
+FROM left_table, right_table
+
+WHERE left_table.id = right_table.id
+
 #### Example
 
-SELECT continent, MAX(indep_year) AS most_recent
+SELECT DISTINCT  monarchs.continent, sub.most_recent
 
-FROM states
+FROM monarchs
 
-GROUP BY continents;
+    (SELECT continent, MAX (indep_year) AS most_recent
+
+    FROM states
+
+    GROUP BY continent) AS sub
+
+WHERE monarchs.continent = sub.continent
+
+ORDER  BY continent;
+
+![1746710131173](image/sql/1746710131173.png)
