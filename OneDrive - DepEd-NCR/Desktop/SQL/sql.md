@@ -576,7 +576,6 @@ FROM left_table, right_table
 
 WHERE left_table.id = right_table.id
 
-
 - without duplicates
 
 SELECT DISTINCT left_table.id, left_val
@@ -602,3 +601,33 @@ WHERE monarchs.continent = sub.continent
 ORDER  BY continent;
 
 ![1746710131173](image/sql/1746710131173.png)
+
+# Intermediate SQL
+
+## We'll take the Case
+
+- contains a WHEN, THEN, and ELSE statement, finished with END
+
+### SYNTAX
+
+CASE WHEN x = 1 THEN 'a'
+WHEN x = 2 THEN 'b'
+ELSE 'c' END AS new_column
+
+#### Example
+
+SELECT
+
+    CASE WHEN hometeam_id = 10189 THEN 'FC Schalke 04'
+
+    WHEN hometeam_id = 9823 THEN 'FC Bayern Munich'
+
+    ELSE 'Other' END AS home_team,
+
+    COUNT(id) AS total_matches
+
+FROM matches_germany
+
+-- Group by the CASE statement alias
+
+GROUP BY home_team;
