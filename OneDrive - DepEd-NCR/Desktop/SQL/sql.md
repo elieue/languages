@@ -606,15 +606,17 @@ ORDER  BY continent;
 
 ## We'll take the Case
 
+### We'll take the Case
+
 - contains a WHEN, THEN, and ELSE statement, finished with END
 
-### SYNTAX
+#### SYNTAX
 
 CASE WHEN x = 1 THEN 'a'
 WHEN x = 2 THEN 'b'
 ELSE 'c' END AS new_column
 
-#### Example
+##### Example
 
 SELECT
 
@@ -631,3 +633,5 @@ FROM matches_germany
 -- Group by the CASE statement alias
 
 GROUP BY home_team;
+
+### In CASE things get more complex
