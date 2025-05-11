@@ -660,3 +660,11 @@ FROM match
 WHERE hometeam_id = 8455 OR awayteam_id = 8455;
 
 ![1746975463652](image/sql/1746975463652.png)
+
+### CASE WHEN with aggregate functions
+
+
+#### Syntax
+
+
+##### Example
