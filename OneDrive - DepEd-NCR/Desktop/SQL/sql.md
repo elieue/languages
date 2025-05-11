@@ -636,6 +636,9 @@ GROUP BY home_team;
 
 ### In CASE things get more complex
 
+- What's in your ELSE clause
+- 
+
 #### Syntax
 
 ##### Example
@@ -655,3 +658,5 @@ SELECT date, hometeam_id, awayteam_id
 FROM match
 
 WHERE hometeam_id = 8455 OR awayteam_id = 8455;
+
+![1746975463652](image/sql/1746975463652.png)
