@@ -635,3 +635,23 @@ FROM matches_germany
 GROUP BY home_team;
 
 ### In CASE things get more complex
+
+#### Syntax
+
+##### Example
+
+SELECT date, hometeam_id, awayteam_id
+
+    CASE WHEN hometeam_id = 8455 AND home_goal > away_goal
+
+    THEN 'Chealse home win!'
+
+    WHEN awayteam_id = 8455 AND home_goal < away_goal
+
+    THEN 'Chealse away win!'
+
+    ELSE 'Loss or tie :(' END AS outcome
+
+FROM match
+
+WHERE hometeam_id = 8455 OR awayteam_id = 8455;
