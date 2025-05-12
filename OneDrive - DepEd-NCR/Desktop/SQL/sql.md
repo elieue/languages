@@ -682,7 +682,6 @@ FROM match
 
 GROUP BY season;
 
-
 **CASE WHEN with SUM**
 
 SELECT season,
@@ -695,15 +694,30 @@ FROM match
 
 GROUP BY season;
 
-
 **CASE WHEN with AVG**
-
 
 SELECT season,
 
-    AVG(CASE WHEN hometeam_id = 8650 THEN home_goal END) AS avg_homegoals
+    ROUND(AVG(CASE WHEN hometeam_id = 8650 THEN home_goal END),2) AS avg_homegoals
 
-    AVG(CASE WHEN awayteam_id = 8650 THEN away_goal END) AS avg_awaygoals
+    ROUND(AVG(CASE WHEN awayteam_id = 8650 THEN away_goal END),2) AS avg_awaygoals
+
+FROM match
+
+GROUP BY season;
+
+
+**PERCENTAGES with CASE and AVG**
+
+SELECT season,
+
+    AVG(CASE WHEN hometeam_id = 8455 AND home_goal > away_goal THEN 1
+
+    WHEN  hometeam_id = 8455 AND home_goal < away_goal THEN 0 END) AS pct_homewins
+
+    AVG(CASE WHEN hometeam_id = 8455 AND away_goal > home_goal THEN 1
+
+    WHEN  hometeam_id = 8455 AND away_goal < home_goal THEN 0 END) AS pct_awaywins
 
 FROM match
 
