@@ -687,9 +687,23 @@ GROUP BY season;
 
 SELECT season,
 
-SUM(CASE WHEN hometeam_id = 8650 THEN home_goal END) AS home_goals
+    SUM(CASE WHEN hometeam_id = 8650 THEN home_goal END) AS home_goals
 
-SUM(CASE WHEN awayteam_id = 8650 THEN away_goal END) AS away_goals
+    SUM(CASE WHEN awayteam_id = 8650 THEN away_goal END) AS away_goals
+
+FROM match
+
+GROUP BY season;
+
+
+**CASE WHEN with AVG**
+
+
+SELECT season,
+
+    AVG(CASE WHEN hometeam_id = 8650 THEN home_goal END) AS avg_homegoals
+
+    AVG(CASE WHEN awayteam_id = 8650 THEN away_goal END) AS avg_awaygoals
 
 FROM match
 
