@@ -672,11 +672,24 @@ WHERE hometeam_id = 8455 OR awayteam_id = 8455;
 
 ##### Example
 
-CASE WHEN with COUNT
+**CASE WHEN with COUNT**
 
 SELECT season,
 
     COUNT(CASE WHEN hometeam_id = 8650 AND home_goal > away_goal THEN id END) AS home_wins
+
+FROM match
+
+GROUP BY season;
+
+
+**CASE WHEN with SUM**
+
+SELECT season,
+
+SUM(CASE WHEN hometeam_id = 8650 THEN home_goal END) AS home_goals
+
+SUM(CASE WHEN awayteam_id = 8650 THEN away_goal END) AS away_goals
 
 FROM match
 
