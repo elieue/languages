@@ -663,8 +663,11 @@ WHERE hometeam_id = 8455 OR awayteam_id = 8455;
 
 ### CASE WHEN with aggregate functions
 
+- Case statements are great for
+  - Categorizing data
+  - Filtering data
+  - Aggregating data
 
 #### Syntax
-
 
 ##### Example
