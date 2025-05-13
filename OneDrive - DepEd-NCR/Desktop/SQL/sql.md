@@ -706,7 +706,6 @@ FROM match
 
 GROUP BY season;
 
-
 **PERCENTAGES with CASE and AVG**
 
 SELECT season,
@@ -722,3 +721,23 @@ SELECT season,
 FROM match
 
 GROUP BY season;
+
+## Short and Simple Subqueries
+
+### WHERE are the Subqueries?
+
+#### Syntax
+
+##### Example
+
+### Subqueries in FROM
+
+#### Syntax
+
+##### Example
+
+### Subqueries everywhere! And best practices!Syntax
+
+#### Syntax
+
+##### Example
