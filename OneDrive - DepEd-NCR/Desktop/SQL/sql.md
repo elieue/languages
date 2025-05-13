@@ -724,6 +724,20 @@ GROUP BY season;
 
 ## Short and Simple Subqueries
 
+Simple Subqueries - can be evaluated independently from the outer query
+
+Ex. SELECT home_goal
+
+    FROM match
+
+    WHERE home_goal > (
+
+    SELECT AVG(home_goal)
+
+    FROM match)
+
+SELECT AVG(home_goal) FROM match;
+
 ### WHERE are the Subqueries?
 
 #### Syntax
