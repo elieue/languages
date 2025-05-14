@@ -724,6 +724,13 @@ GROUP BY season;
 
 ## Short and Simple Subqueries
 
+Why subqueries?
+
+- Comparing grgoups to summarized values
+- Reshaping data
+- Combining data that cannot be joined
+
+
 Simple Subqueries - can be evaluated independently from the outer query
 
 Ex. SELECT home_goal
