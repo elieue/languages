@@ -730,8 +730,9 @@ Why subqueries?
 - Reshaping data
 - Combining data that cannot be joined
 
-
 Simple Subqueries - can be evaluated independently from the outer query
+
+- evaluated once in the entire statement
 
 Ex. SELECT home_goal
 
@@ -745,11 +746,24 @@ Ex. SELECT home_goal
 
 SELECT AVG(home_goal) FROM match;
 
+- can run on its own and get a result
+
 ### WHERE are the Subqueries?
 
 #### Syntax
 
 ##### Example
+
+SELECT date, hometeam_id, awayteam_id, home_goal, away_goal
+
+FROM match
+
+WHERE season = '2012/2013'
+
+    AND home_goal > (SELECT AVG(home_goal)
+
+    FROM match);
+
 
 ### Subqueries in FROM
 
