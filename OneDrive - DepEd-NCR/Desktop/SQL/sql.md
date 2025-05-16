@@ -773,6 +773,8 @@ WHERE season = '2012/2013'
 - You can create multiple subqueries in one FROM statement
   - Alias them!
   - Join them!
+- You can join a subquery to a table in FROM
+  - include a joining columns in both tables!
 
 #### Syntax
 
@@ -794,7 +796,7 @@ GROUP BY team;
 
 SELECT team, home_avg
 
-FROM (SELECT 
+FROM (SELECT
 
     t.team_long_name AS team, AVG(m.home_goal) AS home_avg
 
@@ -811,7 +813,6 @@ FROM (SELECT
 ORDER BY home_avg DESC
 
 LIMIT 3;
-
 
 ### Subqueries everywhere! And best practices!Syntax
 
