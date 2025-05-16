@@ -764,12 +764,54 @@ WHERE season = '2012/2013'
 
     FROM match);
 
-
 ### Subqueries in FROM
+
+- restructure and transform your data
+  - transform data from long to wide before selecting
+  - prefiltering data
+- Calculating aggregates of aggregates
+- You can create multiple subqueries in one FROM statement
+  - Alias them!
+  - Join them!
 
 #### Syntax
 
 ##### Example
+
+SELECT t.team_long_name AS team, AVG(m.home_goal) AS home_avg
+
+FROM match AS m
+
+LEFT JOIN team AS t
+
+ON m.hometeam_id - t.team_api_id
+
+WHERE season = '2011/2012'
+
+GROUP BY team;
+
+![1747410250272](image/sql/1747410250272.png)
+
+SELECT team, home_avg
+
+FROM (SELECT 
+
+    t.team_long_name AS team, AVG(m.home_goal) AS home_avg
+
+    FROM match AS m
+
+    LEFT JOIN team AS t
+
+    ON m.hometeam_id - t.team_api_id
+
+    WHERE season = '2011/2012'
+
+    GROUP BY team) AS subsequery
+
+ORDER BY home_avg DESC
+
+LIMIT 3;
+
 
 ### Subqueries everywhere! And best practices!Syntax
 
