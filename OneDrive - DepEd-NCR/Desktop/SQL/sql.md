@@ -814,7 +814,22 @@ ORDER BY home_avg DESC
 
 LIMIT 3;
 
-### Subqueries everywhere! And best practices!Syntax
+### Subqueries in SELECT
+
+SELECT WHAT
+
+- returns a single value
+  - include aggregate values to compare to individual values
+- used in mathematical calculations
+  - deviation from the average
+
+Subqueries in SELECT
+
+#### Syntax
+
+##### Example
+
+### Subqueries everywhere! And best practices!
 
 #### Syntax
 
