@@ -823,11 +823,15 @@ SELECT WHAT
 - used in mathematical calculations
   - deviation from the average
 
-Subqueries in SELECT
-
 #### Syntax
 
 ##### Example
+
+SELECT AVG(home_goal + away_goal)
+
+FROM match
+
+WHERE season = '2011/2012';
 
 ### Subqueries everywhere! And best practices!
 
