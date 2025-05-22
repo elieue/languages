@@ -827,9 +827,17 @@ SELECT WHAT
 
 ##### Example
 
-SELECT AVG(home_goal + away_goal)
+SELECT date, home_goal + away_goal) as goals,
 
-FROM match
+(home_goal + away_goal), -
+
+    (SELECT AVG(home_goal + away_goal)
+
+    FROM match
+
+    WHERE season = '2011/2012') AS diff
+
+FROM match 
 
 WHERE season = '2011/2012';
 
