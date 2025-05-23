@@ -823,6 +823,13 @@ SELECT WHAT
 - used in mathematical calculations
   - deviation from the average
 
+Things to keep in mind:
+
+- Need to return a SINGLE vlaue
+  - WIll generate an error otherwise
+- Make sure you have all filters in the right places
+  - Properly filter both the main and the subquery
+
 #### Syntax
 
 ##### Example
@@ -837,9 +844,12 @@ SELECT date, home_goal + away_goal) as goals,
 
     WHERE season = '2011/2012') AS diff
 
-FROM match 
+FROM match
 
 WHERE season = '2011/2012';
+
+
+SELECT season, COUNT(id) AS matches, 12837 as total_matches FROM match GROUP BY season;
 
 ### Subqueries everywhere! And best practices!
 
