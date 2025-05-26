@@ -848,11 +848,27 @@ FROM match
 
 WHERE season = '2011/2012';
 
-
 SELECT season, COUNT(id) AS matches, 12837 as total_matches FROM match GROUP BY season;
 
 ### Subqueries everywhere! And best practices!
 
+
 #### Syntax
 
 ##### Example
+
+SELECT
+    s.stage,
+    ROUND(s.avg_goals, 2) AS avg_goal,
+    (SELECT AVG(home_goal + away_goal)
+     FROM match WHERE season = '2013/2014') AS overall_avg
+FROM
+    (SELECT
+        stage,
+        AVG(home_goal + away_goal) AS avg_goals
+     FROM match
+     WHERE season = '2013/2014'
+     GROUP BY stage) AS s
+WHERE
+    s.avg_goals > (SELECT AVG(home_goal + away_goal)
+                   FROM match WHERE season = '2013/2014');
