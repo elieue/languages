@@ -750,8 +750,6 @@ SELECT AVG(home_goal) FROM match;
 
 ### WHERE are the Subqueries?
 
-#### Syntax
-
 ##### Example
 
 SELECT date, hometeam_id, awayteam_id, home_goal, away_goal
@@ -776,9 +774,7 @@ WHERE season = '2012/2013'
 - You can join a subquery to a table in FROM
   - include a joining columns in both tables!
 
-#### Syntax
-
-##### Example
+#### Example
 
 SELECT t.team_long_name AS team, AVG(m.home_goal) AS home_avg
 
@@ -828,47 +824,4 @@ Things to keep in mind:
 - Need to return a SINGLE vlaue
   - WIll generate an error otherwise
 - Make sure you have all filters in the right places
-  - Properly filter both the main and the subquery
-
-#### Syntax
-
-##### Example
-
-SELECT date, home_goal + away_goal) as goals,
-
-(home_goal + away_goal), -
-
-    (SELECT AVG(home_goal + away_goal)
-
-    FROM match
-
-    WHERE season = '2011/2012') AS diff
-
-FROM match
-
-WHERE season = '2011/2012';
-
-SELECT season, COUNT(id) AS matches, 12837 as total_matches FROM match GROUP BY season;
-
-### Subqueries everywhere! And best practices!
-
-
-#### Syntax
-
-##### Example
-
-SELECT
-    s.stage,
-    ROUND(s.avg_goals, 2) AS avg_goal,
-    (SELECT AVG(home_goal + away_goal)
-     FROM match WHERE season = '2013/2014') AS overall_avg
-FROM
-    (SELECT
-        stage,
-        AVG(home_goal + away_goal) AS avg_goals
-     FROM match
-     WHERE season = '2013/2014'
-     GROUP BY stage) AS s
-WHERE
-    s.avg_goals > (SELECT AVG(home_goal + away_goal)
-                   FROM match WHERE season = '2013/2014');
+  - Properly filter both the main and the subquery##### Example
