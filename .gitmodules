@@ -1,0 +1,3 @@
+[submodule "datacamp_sql/datacamp_sql/sql"]
+	path = datacamp_sql/datacamp_sql/sql
+	url = https://github.com/elieue/sql.git
