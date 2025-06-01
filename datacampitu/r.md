@@ -174,7 +174,10 @@ ORDER BY
     stay DESC
 LIMIT 9;
 
-
 # Intermediate R
 
 ## Relational Operators
+
+|  TRUE == TRUE<br />Output: TRUE  | "hello" == "goodbye"<br />Output: FALSE |
+| :-------------------------------: | :-------------------------------------: |
+| TRUE == FALSE<br />Output: FALSE |        3 == 2<br />Output: FALSE        |
