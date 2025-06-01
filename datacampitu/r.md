@@ -190,19 +190,26 @@ Relational Operators
 | :------------------------------: | :-------------------------------------: |
 | TRUE != FALSE<br />Output: TRUE |        3 != 2<br />Output: TRUE        |
 
-< and >
-
-**Inequality ==**
-
-| 3 < 5<br />Output: TRUE | "hello" > "goodbye"<br />Output: TRUE |
-| :-----------------------: | :-------------------------------------: |
-| 3 > 5<br />Output: FALSE |    TRUE < FALSE<br />Output: FALSE    |
-
-< and >
-
-**Inequality ==**
+<= and >=
 
 | 5 >= 3<br />Output: TRUE |
 | ------------------------ |
 | 3  >= 3                 |
 | Output: TRUE             |
+
+
+
+Relational Operators & Vectors
+
+linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+
+linkedin
+
+Output: 16 9 13 5 2 17 14
+
+
+linkedin > 10
+
+TRUE FALSE TRUE FALSE FALSE TRUE TRUE
+
+Note: Can also compare vectors n vectors
