@@ -176,8 +176,28 @@ LIMIT 9;
 
 # Intermediate R
 
-## Relational Operators
+Relational Operators
+
+**Equality ==**
 
 |  TRUE == TRUE<br />Output: TRUE  | "hello" == "goodbye"<br />Output: FALSE |
 | :-------------------------------: | :-------------------------------------: |
 | TRUE == FALSE<br />Output: FALSE |        3 == 2<br />Output: FALSE        |
+
+**Inequality ==**
+
+| TRUE != TRUE<br />Output: FALSE | "hello" != "goodbye"<br />Output: TRUE |
+| :------------------------------: | :-------------------------------------: |
+| TRUE != FALSE<br />Output: TRUE |        3 != 2<br />Output: TRUE        |
+
+< and >
+
+**Inequality ==**
+
+| 3 < 5<br />Output: TRUE | "hello" > "goodbye"<br />Output: TRUE |
+| :-----------------------: | :-------------------------------------: |
+| 3 > 5<br />Output: FALSE |    TRUE < FALSE<br />Output: FALSE    |
+
+< and >
+
+**Inequality ==**
