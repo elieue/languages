@@ -173,3 +173,8 @@ GROUP BY
 ORDER BY
     stay DESC
 LIMIT 9;
+
+
+# Intermediate R
+
+## Relational Operators
