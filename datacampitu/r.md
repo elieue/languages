@@ -201,3 +201,8 @@ Relational Operators
 < and >
 
 **Inequality ==**
+
+| 5 >= 3<br />Output: TRUE |
+| ------------------------ |
+| 3  >= 3                 |
+| Output: TRUE             |
