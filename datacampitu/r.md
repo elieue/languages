@@ -176,37 +176,34 @@ LIMIT 9;
 
 # Intermediate R
 
-Relational Operators
+## Relational Operators
 
-**Equality ==**
+### **Equality ==**
 
 |  TRUE == TRUE<br />Output: TRUE  | "hello" == "goodbye"<br />Output: FALSE |
 | :-------------------------------: | :-------------------------------------: |
 | TRUE == FALSE<br />Output: FALSE |        3 == 2<br />Output: FALSE        |
 
-**Inequality ==**
+### **Inequality ==**
 
 | TRUE != TRUE<br />Output: FALSE | "hello" != "goodbye"<br />Output: TRUE |
 | :------------------------------: | :-------------------------------------: |
 | TRUE != FALSE<br />Output: TRUE |        3 != 2<br />Output: TRUE        |
 
-<= and >=
+### <= and >=
 
 | 5 >= 3<br />Output: TRUE |
 | ------------------------ |
 | 3  >= 3                 |
 | Output: TRUE             |
 
-
-
-Relational Operators & Vectors
+### Relational Operators & Vectors
 
 linkedin <- c(16, 9, 13, 5, 2, 17, 14)
 
 linkedin
 
 Output: 16 9 13 5 2 17 14
-
 
 linkedin > 10
 
