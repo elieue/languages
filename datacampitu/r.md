@@ -213,8 +213,17 @@ Note: Can also compare vectors n vectors
 
 ## Logical Operators
 
+
 AND operator &
 
 |  TRUE & TRUE<br />Output: TRUE  | TRUE & FALSE<br />Output: FALSE |
 | :-----------------------------: | :------------------------------: |
 | FALSE & TRUE<br />Output: FALSE | FALSE & FALSE<br />Output: FALSE |
+
+OR operator "|"
+
+| TRUE & TRUE<br />Output: TRUE | TRUE & FALSE<br />Output: TRUE |
+| :----------------------------: | :------------------------------: |
+| FALSE & TRUE<br />Output: TRUE | FALSE & FALSE<br />Output: FALSE |
+
+The double ampersand and or only return the first comparison
