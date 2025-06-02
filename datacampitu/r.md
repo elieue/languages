@@ -210,3 +210,5 @@ linkedin > 10
 TRUE FALSE TRUE FALSE FALSE TRUE TRUE
 
 Note: Can also compare vectors n vectors
+
+## Logical Operators
