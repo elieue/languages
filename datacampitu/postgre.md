@@ -52,7 +52,7 @@ CREATE TABLE school (
 
 );
 
-name of schema: public.school 
+name of schema: public.school
 
 **Create SCHEMA command**
 
@@ -75,3 +75,40 @@ CREATE TABLE division1.school (
     num_scholarships INTEGER DEFAULT 0 --IF NO VALUE IS EXPLICITLY STATED
 
 );
+
+## PostgreSQL Data Types
+
+### Introduction to PostgreSQL data types
+
+#### Data categories in PostgreSQL
+
+- Text - names, product descriptions
+- Numeric - order size and physical descriptions
+- Temporal - delivery dates and timestamps
+- Boolean - True/False
+- Others: Geometric/Binary
+
+##### Example 1: representing birthdays
+
+- Cathy: May 3rd, 2006
+- Possible representations
+  - "May 3, 3006" (text)
+  - "5/3/2006" (text)
+  - 2006-05-03 (date)
+
+##### Example 2:  trackling payment status 
+
+- Did attemding member pay?
+- Possible representations:
+  - "Yes"/"No" (text)
+  - "Y"/"N" (text)
+  - 'true'/'false' (boolean)
+- Specific types provide restriction on values
+
+##### Example 3: trip distance
+
+- Mark flew 326 miles for client meeting
+- Possible representations
+  - "326 miles" (text)
+  - "326" (text)
+  - 326 (numeric)
