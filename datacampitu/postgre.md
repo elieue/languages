@@ -32,6 +32,12 @@ CREATE TABLE school (
 
 Providing database users with separate environments
 
+![1749379158328](image/postgre/1749379158328.png)
+
+If schema is a series it is a schema write e.g. details of a customer
+
+If a schema has a centralized table it is a schema read  e.g. for high scale information delivery (star schema)
+
 **Schema Uses**
 
 - organizing database objects into related groups
@@ -96,7 +102,7 @@ CREATE TABLE division1.school (
   - "5/3/2006" (text)
   - 2006-05-03 (date)
 
-##### Example 2:  trackling payment status 
+##### Example 2:  trackling payment status
 
 - Did attemding member pay?
 - Possible representations:
@@ -112,3 +118,37 @@ CREATE TABLE division1.school (
   - "326 miles" (text)
   - "326" (text)
   - 326 (numeric)
+
+##### Example: 
+
+-- Create the project table
+
+CREATE TABLE project(   -- Unique identifier for projects
+
+    id SERIAL PRIMARY KEY,
+
+    -- Whether or not project is franchise opportunity
+
+    is_franchise boolean DEFAULT FALSE,
+
+    -- Franchise name if project is franchise opportunity
+
+    franchise_name text DEFAULT NULL,
+
+    -- State where project will reside
+
+    project_state text,
+
+    -- County in state where project will reside
+
+    project_county text,
+
+    -- District number where project will reside
+
+    congressional_district numeric,
+
+    -- Amount of jobs projected to be created
+
+    jobs_supported numeric
+
+);

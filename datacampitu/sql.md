@@ -825,3 +825,11 @@ Things to keep in mind:
   - WIll generate an error otherwise
 - Make sure you have all filters in the right places
   - Properly filter both the main and the subquery
+
+### Subqueries everywhere! And best practices!
+
+- Format your queries
+- Annotate your queries with comments
+  /*  this is a comment   */                   --this is a comment
+- Indent your queries
+-
