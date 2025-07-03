@@ -832,4 +832,34 @@ Things to keep in mind:
 - Annotate your queries with comments
   /*  this is a comment   */                   --this is a comment
 - Indent your queries
--
+- Is that subquery necessary
+- Properly filter each subquery
+
+## Correlated Queries, Nested Queries, and Common Table Expressions
+
+## Correlated subqueries
+
+- uses values from the other query to generate a result
+- re-run for every row generated in the final data set
+- used for advanced joining, filtering, and evaluating data
+
+Example: 
+
+Which match stages tend to have a higher than average number of goals scored
+
+**Simple vs correlated subqueries**
+
+Simple Subquery
+
+- Can be run independently from the main query
+- Evaluated once in the whole query
+
+Correlated Subquery
+
+- Dependent on the main query to execute
+- Evaluated in loops
+
+  - Significantly slows dun query time
+
+  Correlated subqueries
+- What is the average number of goals in each category
